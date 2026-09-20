@@ -1,0 +1,7 @@
+You want to…	Run this
+Start the app	npm run dev
+Start the Postgres container (after reboot)	docker start ritual-pg
+Stop Postgres	docker stop ritual-pg
+Wipe and reset ALL data	docker rm -f ritual-pg then re-run the docker run + npx drizzle-kit push + node scripts/seed.mjs
+See raw data in the DB	docker exec -it ritual-pg psql -U postgres -d app_db then SELECT * FROM habits;
+Build for production	npm run build && npm start
